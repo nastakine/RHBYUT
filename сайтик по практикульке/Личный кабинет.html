@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Cofe Ман</title>
+
+                        <style>
+                        body{
+                        background:#f4c789; /* Меняется фон экрана, выбирается здесь */
+                        }
+                        .body_area{
+                        width:  1471px;
+                        margin: 0 auto;
+                        }
+                        #wrapper{ /* Оболочка страницы сайта */
+                        width: 1470px; /* Меняется ширина страницы */
+                        margin: 10 auto;
+                        background:#f4e2af; /* Меняется задний фон страницы */
+                        }
+
+                        /* Шапка сайта */
+
+                        #header{
+                        position:relative; /* Задаём блоку относительное позиционирование для того, чтобы затем размещать, в нём другие элементы и позиционировать относительно его границ поверх фоновой картинки и заголовка */
+                        height: 50px; /* Высота шапки */
+                        background-color: #ffffff; /* Фон шапки */
+                        margin-bottom: 10px; /* Нижний отступ шапки от остального контента */
+                        border-radius: 5px; /* Закругляются углы блока */
+                        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 3px; /* Тень. Визуально приподнимает блок над оболочкой */
+                        }
+
+                        #d.img{ /* Фоновая картинка в шапке */
+                            float: left; /* Разрешаем наплывание других элементов на картинку */
+                            margin: 0px 500px 0px 0px;} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
+                        h1{ /* Заголовок сайта */
+                        margin:0 0 0px 0px; /* Заголовок двигается верх-вправо-вниз-влево. */
+                        color:#464451; /* Цвет заголовка */
+                        }
+                        #b {
+                             position: relative;
+                             top: -67px;
+                            right: -1400px;
+                        }
+                        
+                        #vin{
+                            width: 485px;
+                            height: 250px;
+                            border-radius: 15px;
+                            background-color:#ffffff;
+
+                            
+                        }
+                        .circle {
+                            background: #f4e8c5;
+                            border: 0.1875em solid #000000;
+                            border-radius: 50%;
+                           /* box-shadow: 0.375em 0.375em 0 0 rgba(15, 28, 63, 0.125);*/
+                            height: 6em;
+                            width: 6em;
+                            position: relative;
+                             top: 10px;
+                            right: -10px;
+                            }
+                        #c{
+                            position: relative;
+                             top: -16px;
+                            right: -6px; 
+                        }
+                        #a{
+                            color:#000000; /* Цвет заголовка */
+                            font-size: 30px;
+                            position: relative;
+                            top: -90px;
+                            right: -130px; 
+                        } 
+                        #nomer{ /* Блок номеров */
+                            background-color: #bb6767; /* Фон блока номеров */
+                            border-radius: 15px; /* Закруглённые углы */
+                            position: relative;
+                            top: -25px;
+                        }
+                        .fon{ /* Номер телефона */
+                        float:left; /* Разрешаем другим элементам обтекать абзац справа */
+                        margin:20px 0 0 20px;
+                        }
+                        .mail{ /* Адрес E-mail */
+                        float:left;
+                        margin:20px 0 0 60px;
+                        }
+                        #v{
+                            color:#000000; /* Цвет заголовка */
+                            font-size: 15px;  
+                            font-weight:bolder;
+                            position: relative;
+                            top: -5px;
+                            right: -40px;
+                        }
+                        #vin1{
+                            width: 485px;
+                            height: 250px;
+                            border-radius: 15px;
+                            background-color:#ffffff;
+                            margin:0 auto;  
+                            position: relative;
+                            top: -250px;                           
+                        }
+                        #ci{
+                            position: relative;
+                             top: -10px;
+                            right: -6px;
+                            color:#000000; /* Цвет заголовка */
+                            font-size: 30px;
+                             
+                        }
+                        #cik{
+                            position: relative;
+                             top: -90px;
+                            right: -150px;
+                            color:#000000; /* Цвет заголовка */
+                            font-size: 30px;
+                             
+                        }
+                        #dy{
+                            width: 160px;
+                            height: 95px;
+                            border-radius: 15px;
+                            background-color:#f2aefc;
+                            margin:0 auto;  
+                            position: relative;
+                            top: -50px;
+                            right: 150px;
+                        }
+                        #ii{
+                            font-size: 5;
+                            padding: 4px; /* Отступ текста от краёв */
+                            margin-left:10px;
+                        }
+                        #kyki{
+                            margin-left:5px;
+                        }
+                        #dy1{
+                            border: 0.1875em solid #000000;
+                            width: 130px;
+                            height: 90px;
+                            border-radius: 15px;
+                            background-color:#ffffff;
+                            margin:0 auto;  
+                            position: relative;
+                            top: -145px;
+                            right: -10px;
+                        }
+                        
+                        #c1{
+                            position: relative;
+                             top: 0px;
+                            right: 0px; 
+                        }
+                        #dy2{
+                            border: 0.1875em solid #000000;
+                            width: 130px;
+                            height: 90px;
+                            border-radius: 15px;
+                            background-color:#ffffff;
+                            margin:0 auto;  
+                            position: relative;
+                            top: -240px;
+                            right: -160px;
+                        }
+                        #vivi{
+                            position: relative;
+                            top: 5px;
+                            right: -38px;
+                        }
+                        #zyzy{
+                            font-weight: bolder;
+                            position: relative;
+                            top: -10px;
+                            right: -4px;
+                        }
+                        #vin2{
+                            width: 485px;
+                            height: 250px;
+                            border-radius: 15px;
+                            background-color:#ffffff;    
+                            float: right;
+                            position: relative;
+                            top: -500px;                       
+                        }
+                        #vini{
+                            position: relative;
+                            top: 5px;
+                            right: -30px;
+                        }
+                        #zyky{
+                            font-size: 13px;
+                            font-weight: bolder;
+                            position: relative;
+                            top: -10px;
+                            right: -4px;
+                        }
+ </style>
+</head>
+<body>
+    <section class="body_area">
+ <div id="wrapper"> <!--Оболочка страницы-->
+<!--Шапка сайта-->
+    <div id="header">
+
+<!--Фоновая картинка в шапке сайта-->
+<p><a href="CofeМан.html"><img src="img/logo.png" width="100"  height="50" alt="логотип"></a></p>
+      <p><a href="Личный кабинет.html"><img id="b" src="img/личный кабинет.png" width="45"  height="45" border="0" alt="личный кабинет"></a></p></div>
+
+<div id="vin">
+                <div class="circle"><p><a href="#"><img id="c" src="img/Личный кабинет иконка.png" width="85"  height="85"  alt="Личный кабинет иконка"></a></p></div>
+                <p id="a"> Иван Иванов Иванович<img id="c" src="img/карандаш.png" width="20"  height="20"  alt="Личный кабинет иконка"></p>
+                <div id="nomer"> <p class="fon"><strong>Телефон:<br> 265-48-76</strong> </p>
+                <p class="mail"><strong>E-mail<br>ivan.ivanow@mail.ru</strong></p>
+                </div>
+                <form id="v" name="male_female" action="" method="post">
+                Пол:<br />
+                <input type="radio" name="Sex" value="Мужской" checked="checked" /> М
+                <input type="radio" name="Sex" value="Женский" /> Ж<br />
+                </form>
+</div>
+<div id="vin1">
+                <div class="circle"><p><a href="#"><img id="ci" src="img/карта.png" width="85"  height="85"  alt="карта"></a></p></div>
+                <p id="cik">Способы оплаты<img id="c" src="img/карандаш.png" width="20"  height="20"  alt="карандаш"></p>
+                <div id="dy">
+                <p id="ii">Основной способ <img id="c1" src="img/галочка.png" width="8" height="8" alt="гвлочка"></p>
+                <p id="kyki">255654******6658 <img src="img/сбер_pay.png" width="15" height="15" alt="сбер_pay"></p>
+</div>
+<div id="dy1">
+                <img id="vivi" src="img/новая карта.png" width="50" height="50" alt="другой способ оплаты"><br>
+                <p id="zyzy">Привязать карту</p>
+</div>
+<div id="dy2"> 
+    <img id="vini" src="img/сбп.png" width="70" height="50" alt="сбп"><br>
+    <p id="zyky">Привязать счет СБП</p>
+</div>
+</div>
+      <div id="vin2">
+        
+      </div>
+    </section>
+</body>
+</html>

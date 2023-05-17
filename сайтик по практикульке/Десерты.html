@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Cofe Ман</title>
+
+                        <style>
+                        body{
+                        background:#f4c789; /* Меняется фон экрана, выбирается здесь */
+                        }
+
+                        #wrapper{ /* Оболочка страницы сайта */
+                        width: 1470px; /* Меняется ширина страницы */
+                        margin: 10 auto;
+                        background:#f4e2af; /* Меняется задний фон страницы */
+                        }
+
+                        /* Шапка сайта */
+
+                        #header{
+                        position:relative; /* Задаём блоку относительное позиционирование для того, чтобы затем размещать, в нём другие элементы и позиционировать относительно его границ поверх фоновой картинки и заголовка */
+                        height: 50px; /* Высота шапки */
+                        background-color: #ffffff; /* Фон шапки */
+                        margin-bottom: 10px; /* Нижний отступ шапки от остального контента */
+                        border-radius: 5px; /* Закругляются углы блока */
+                        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 3px; /* Тень. Визуально приподнимает блок над оболочкой */
+                        }
+
+                        #d.img{ /* Фоновая картинка в шапке */
+                            float: left; /* Разрешаем наплывание других элементов на картинку */
+                            margin: 0px 500px 0px 0px;} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
+                        h1{ /* Заголовок сайта */
+                        margin:0 0 0px 0px; /* Заголовок двигается верх-вправо-вниз-влево. */
+                        color:#464451; /* Цвет заголовка */
+                        }
+                        #b {
+                             position: relative;
+                             top: -67px;
+                            right: -1400px;
+                        }
+
+                        .cards {
+                            display: grid;
+                            /* Автоматически заполняем на всю ширину grid-контейнера */
+                            grid-template-columns: repeat(auto-fill, 225px);
+                            width: 100%;
+                            max-width: 1000px; /* Ширина grid-контейнера */
+                            justify-content: center;
+                            justify-items: center; /* Размещаем карточку по центру */
+                            column-gap: 30px; /* Отступ между колонками */
+                            row-gap: 40px; /* Отступ между рядами */
+                            margin: 0 auto;
+                            }
+                            .card {
+                          width: 225px;
+                          min-height: 350px;
+                          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+                          display: flex;
+                          flex-direction: column; /* Размещаем элементы в колонку */
+                          border-radius: 4px;
+                          transition: 0.2s;
+                          position: relative;
+                        }
+
+                        /* При наведении на карточку - меняем цвет тени */
+                        .card:hover {
+                          box-shadow: 4px 8px 16px rgba(255, 102, 51, 0.2);
+                        }
+
+                        .card__top {
+                          flex: 0 0 220px; /* Задаем высоту 220px, запрещаем расширение и сужение по высоте */
+                          position: relative;
+                          overflow: hidden; /* Скрываем, что выходит за пределы */
+                        }
+
+                        /* Контейнер для картинки */
+                        .card__image {
+                          display: block;
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 100%;
+                          height: 100%;
+                        }
+
+                        .card__image > img {
+                          width: 100%;
+                          height: 100%;
+                          object-fit: contain; /* Встраиваем картинку в контейнер card__image */
+                          transition: 0.2s;
+                        }
+
+                        /* При наведении - увеличиваем картинку */
+                        .card__image:hover > img {
+                          transform: scale(1.1);
+                        }
+
+                        .card__bottom {
+                          display: flex;
+                          flex-direction: column;
+                          flex: 1 0 auto; /* Занимаем всю оставшуюся высоту карточки */
+                          padding: 10px;
+                        }
+
+                        .card__prices {
+                          display: flex;
+                          margin-bottom: 10px;
+                          flex: 0 0 20%; /* Размещаем цены равномерно в две колонки */
+                        }
+
+                        .card__price::after {
+                          content: "₽";
+                          margin-left: 4px;
+                          position: relative;
+                        }
+
+                        .card__price--discount {
+                          font-weight: 700;
+                          font-size: 19px;
+                          color: #414141;
+                          display: flex;
+                          flex-wrap: wrap-reverse;
+                        }
+
+
+                        .card__price--common {
+                          font-weight: 400;
+                          font-size: 17px;
+                          color: #606060;
+                          display: flex;
+                          flex-wrap: wrap-reverse;
+                          justify-content: flex-end;
+                        }
+
+
+                        .card__title {
+                          display: block;
+                          margin-bottom: 10px;
+                          font-weight: 400;
+                          font-size: 17px;
+                          line-height: 150%;
+                          color: #414141;
+                        }
+
+                        .card__title:hover {
+                          color: #ff6633;
+                        }
+
+                        .card__add {
+                          display: block;
+                          width: 100%;
+                          font-weight: 400;
+                          font-size: 17px;
+                          color: #70c05b;
+                          padding: 10px;
+                          text-align: center;
+                          border: 1px solid #70c05b;
+                          border-radius: 4px;
+                          cursor: pointer; /* Меняем курсор при наведении */
+                          transition: 0.2s;
+                          margin-top: auto; /* Прижимаем кнопку к низу карточки */
+                        }
+
+                        .card__add:hover {
+                          border: 1px solid #ff6633;
+                          background-color: #ff6633;
+                          color: #fff;
+                        }
+                    </style>
+</head>
+<body>
+  <div id="wrapper"> <!--Оболочка страницы-->
+<!--Шапка сайта-->
+    <div id="header">
+
+<!--Фоновая картинка в шапке сайта-->
+<p><a href="CofeМан.html"><img src="img/logo.png" width="100"  height="50" alt="логотип"></a></p>
+<p><a href="Личный кабинет.html"><img id="b" src="img/личный кабинет.png" width="45"  height="45" border="0" alt="личный кабинет"></a></p></div>
+
+    <!-- Сетка карточек товаров -->
+<div class="cards">
+
+
+  <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a href="#" class="card__image">
+      <img
+        src="img/медовик.png"
+        alt="медовик"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">170</div>
+      <div class=" card__price--common">200мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a  class="card__title">
+      Медовик
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+
+
+  <div class="card">
+   <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a href="#" class="card__image">
+      <img
+        src="img/морковный торт.png"
+        alt="морковный"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">150</div>
+      <div class=" card__price--common">50мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a class="card__title">
+      Морковный торт
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+  </div>
+  <div class="card">
+
+
+   <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a class="card__image">
+      <img
+        src="img/прага.png"
+        alt="прага"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">210</div>
+      <div class=" card__price--common">300мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a  class="card__title">
+      прага
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+  </div>
+  <div class="card">
+    <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a href="#" class="card__image">
+      <img
+        src="img/наполеон.png"
+        alt="наполеон"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">310</div>
+      <div class=" card__price--common">300мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a class="card__title">
+      наполеон
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+  </div>
+  <div class="card">
+   <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a href="#" class="card__image">
+      <img
+        src="img/тирамису.png"
+        alt="тирамису"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">160</div>
+      <div class=" card__price--common">300мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a  class="card__title">
+      тирамису
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+  </div>
+  <div class="card">
+    <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a href="#" class="card__image">
+      <img
+        src="img/чизкейк нью-йорк.png"
+        alt="чизкейк Нью-Йорк"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">250</div>
+      <div class=" card__price--common">300мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a class="card__title">
+      чизкейк Нью-Йорк
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+  </div>
+  <div class="card">
+    <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a href="#" class="card__image">
+      <img
+        src="img/ванильное мороженое.png"
+        alt="шарик мороженого"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">210</div>
+      <div class=" card__price--common">300мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a class="card__title">
+      шарик ванильного мороженого 
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+  </div>
+  <div class="card">
+   <!-- Карточка товара -->
+<div class="card">
+  <!-- Верхняя часть -->
+  <div class="card__top">
+    <!-- Изображение-ссылка товара -->
+    <a href="#" class="card__image">
+      <img
+        src="img/шоколадное мороженое.png"
+        alt="шоколадное мороженое"
+      />
+    </a>
+  </div>
+  <!-- Нижняя часть -->
+  <div class="card__bottom">
+    <!-- Цены на товар (с учетом скидки и без)-->
+    <div class="card__prices">
+      <div class="card__price card__price--discount">135</div>
+      <div class=" card__price--common">250мл</div>
+    </div>
+    <!-- Ссылка-название товара -->
+    <a class="card__title">
+      шарик шоколадного мороженого
+    </a>
+    <!-- Кнопка добавить в корзину -->
+    <button class="card__add">В корзину</button>
+  </div>
+</div>
+  </div>
+</div>
+    </body>
+    </html>

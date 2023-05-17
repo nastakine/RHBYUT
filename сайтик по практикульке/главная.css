@@ -1,0 +1,252 @@
+body{
+    background:#f4c789; /* Меняется фон экрана, выбирается здесь */
+    }
+
+    #wrapper{ /* Оболочка страницы сайта */
+    width: 100% ;
+    max-width: 1471px; /* Меняется ширина страницы */
+    margin: 10 auto;
+    background:#f4e2af; /* Меняется задний фон страницы */
+    }
+
+    /* Шапка сайта */
+  .body_area{
+    width: 100% ;
+    max-width: 1471px;
+    margin: 0 auto;
+  }
+    #header{
+    position:relative; /* Задаём блоку относительное позиционирование для того, чтобы затем размещать, в нём другие элементы и позиционировать относительно его границ поверх фоновой картинки и заголовка */
+    height: 50px; /* Высота шапки */
+    background-color: #ffffff; /* Фон шапки */
+    margin-bottom: 10px; /* Нижний отступ шапки от остального контента */
+    border-radius: 20px; /* Закругляются углы блока */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 3px; /* Тень. Визуально приподнимает блок над оболочкой */
+    z-index: 1;
+    }
+    .nn {
+      display: flex;
+      justify-content: left;
+    }
+    .bb{
+      
+      display: inline-block;
+      height: 10px;
+      width: 40%;
+     
+      z-index: 10;
+    }
+    .spisok1 { /*Настройка списка кнопок*/
+        text-decoration: none;
+        display: flex;
+        justify-content: left;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    ul.spisok1 li { /*Настройка элементов кнопок*/
+        display: inline;
+    }
+    .podSpisok1 { /*Настройка элементов списка*/
+        padding-right: 15%;
+    }
+    .knopka1 { /*Настройки кнопок*/
+      padding: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 0;
+      border-radius: 20px;
+      background-color: #ecb349;
+    }
+    #d.img{ /* Фоновая картинка в шапке */
+        float: left; /* Разрешаем наплывание других элементов на картинку */
+        margin: 0px 500px 0px 0px;} /* Размещаем картинку в блоке header. 1-я и 3-я цифры - двигаем вверх-вниз, 2-я и 4-я цифры - двигаем вправо-влево */
+    h1{ /* Заголовок сайта */
+    margin:0 0 0px 0px; /* Заголовок двигается верх-вправо-вниз-влево. */
+    color:#000000; /* Цвет заголовка */
+    }
+    #b {
+         position: relative;
+         top: -67px;
+        right: -95%;
+    }
+    #n{
+      font-size: 25px;
+    }
+    
+    /* Сайдбар (колонка справа) */
+
+    .sidebar{ /* Блок сайдбара */
+      height: 289px;
+    background-color: #ffffff; /* Фон блока */
+    width: 515px; /* Ширина блока */
+    padding: 10px; /* Отступ текста от краёв */
+    font-size: 25px; /* Размер букв подзаголовка */
+    font-style:italic; /* Курсив */
+    font-weight:bold;
+    border-radius: 5px; /* Закругляем углы блока */
+    box-shadow: rgba(0,0,0,0.5) 0px 1px 3px; /* Задаём блоку тень */
+    }
+    .marcer{ /* Галочки маркеры меню */
+    float: left; /* Размещаем слева от текста */
+    margin: 5px 5px 0 0; /* Двигаются вверх-вправо-вниз-влево */
+    }
+
+    /* Контент (статья) */
+
+    .content{ /* Блок контента */
+      width: 1433px;
+      height: 300px;
+    margin-bottom: 5px; /* Отступ блока статьи от блока подвала */
+    padding: 10px; /* Отступ текста от краёв блока */
+    background: #ffffff; /* Фон статьи */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+    }
+    .ss{
+      
+      margin-right: 15px;
+    }
+    
+    
+    .cart{ /* Блок контента */
+    height: 288px;
+    margin-bottom: 5px; /* Отступ блока статьи от блока подвала */
+    width: 430px; /* Ширина статьи */
+    padding: 10px; /* Отступ текста от краёв блока */
+    background: #ffffff; /* Фон статьи */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+    }
+    /* Подвал */
+
+    #footer{ /* Блок подвала */
+    height:80px; /* Высота блока подвала */
+    background-color: #ffffff; /* Фон блока подвала */
+    margin-bottom: 10px; /* Отступ снизу */
+    border-radius: 5px; /* Закруглённые углы */
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px; /* Тень блока */
+    }
+    .clear{ /* Запрет наплывания. Устанавливается для того, чтобы блок контента, при заполнении текстом и изображениями не наплывал на подвал */
+    clear: both;
+    }
+    .fon{ /* Номер телефона */
+    float:left; /* Разрешаем другим элементам обтекать абзац справа */
+    margin:20px 0 0 20px;
+    }
+    .fax{ /* Номер факса */
+    float:left;
+    margin:20px 0 0 60px;
+    }
+    .mail{ /* Адрес E-mail */
+    float:left;
+    margin:20px 0 0 60px;
+    }
+
+    nav ul { /* меню */
+      list-style: none;
+      padding: 0;
+      }
+    nav a {
+      display: block;
+      text-decoration: none;
+      outline: none; 
+    }
+    .topmenu {
+      backface-visibility: hidden;
+      background: rgba(255,255,255,.8);
+    }
+    .topmenu > li {
+      display: inline-block;
+      position: relative;
+    }
+    .topmenu > li > a {
+      font-family: Arial;
+      height: 70px;
+      line-height: 70px;
+      padding: 0 20px;
+      font-weight: bold;
+      color: #032f4d;
+      text-transform: uppercase;
+      transition: .4s ease-in-out;
+      font-size: 17px;
+    }
+    .down:after {
+      content: "\02C5";
+      margin-left: 5px;
+      font-family: Arial;
+    }
+    .topmenu li a:hover {color: #6a49ec;}
+    .submenu {
+      background: rgb(234, 234, 234);
+      border: 2px solid #c680eb;
+      position: absolute;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      z-index: 5;
+      width: 150px;
+      transform: perspective(600px) rotateX(-90deg);
+      transform-origin: 0% 0%;
+      transition: .6s ease-in-out;
+    }
+    .topmenu > li:hover .submenu {
+      visibility: visible;
+      opacity: 1;
+      transform: perspective(600px) rotateX(0deg);
+    }
+    .submenu li a {
+      color: #230150;
+      font-size: 13px;
+      line-height: 36px;
+      padding: 0 25px;
+      font-family: Arial;
+      transition: .4s ease-in-out;
+    }
+    
+    @media screen and (max-width: 5000px) and (min-width:1471px){
+        .ss{
+            display: inline-block;
+          }
+          .mm{
+            display: flex;
+            justify-content: left;
+          }
+          .bb{
+            margin-top: -65px;
+            margin-left: 150px;
+          }
+          #left{ /* Картинка в тексте слева */
+            float: left;
+            margin: 0px 7px 7px 7px;
+            }
+            .content{
+                height: 250px;
+            }
+            .ooo{
+                height: 287px;
+                 width: 550px;
+            }
+          
+    }
+    @media screen and (max-width: 1470px) and (min-width:0px){
+
+        .bb{
+            margin-top: -65px;
+            margin-left: 70px;
+        }
+        #b{
+            right: -90%;
+        }
+        .content{
+            height: 500px;
+          }
+          .oo{
+            margin-top: 15px;
+            margin-bottom: 15px;
+          }
+          .ooo{
+            width: 300px;
+            height: 600px;
+          }
+    }
